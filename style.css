@@ -1,0 +1,211 @@
+:root {
+  --bg: #0B0C0E;
+  --text: #F2F1EC;
+  --text-dim: #B5B5B0;
+  --text-faint: #8C8C88;
+  --text-placeholder: #68685F;
+  --bio-text: #E3E2DC;
+  --border: #222326;
+  --field-bg: #17181B;
+  --field-border: #2A2B2F;
+  --max-w: 680px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: var(--max-w);
+  padding: 0 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* hero */
+
+.hero {
+  padding: 90px 0 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.1;
+}
+
+.tagline {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* sections */
+
+.section {
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 58ch;
+}
+
+.bio p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--bio-text);
+}
+
+/* contact */
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sublabel {
+  font-size: 13px;
+  color: var(--text-faint);
+}
+
+.plain-email {
+  font-size: 15px;
+}
+
+.contact-form-block {
+  gap: 16px;
+  max-width: 420px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.field input,
+.field textarea {
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  border-radius: 2px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 16px; /* keeps iOS from auto-zooming on focus */
+  padding: 13px 14px;
+  width: 100%;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.botcheck {
+  display: none;
+}
+
+#contact-form button {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 15px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+#contact-form button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.form-status {
+  margin: 0;
+  font-size: 13px;
+  min-height: 1em;
+}
+
+.form-status.success { color: var(--text-dim); }
+.form-status.error { color: #E5A48C; }
+
+/* footer */
+
+.footer {
+  padding: 42px 0 80px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 24px;
+  font-size: 13px;
+}
+
+.socials a {
+  color: var(--text-faint);
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: var(--text);
+}
+
+.copyright {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-placeholder);
+}
